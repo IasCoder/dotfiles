@@ -1,0 +1,5 @@
+#!/bin/sh
+
+icon=$"󰥔 "
+d=$(date "+%a %d %b (%I:%M %P)  ")
+echo "$icon $d"

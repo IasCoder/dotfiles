@@ -1,0 +1,5 @@
+#!/bin/env sh
+
+icon=$"󰖙"
+wtt=$(curl -s "wttr.in?format=3"| sed -E "s/^(.).*\+/\1/" | tr -d 'In|')
+printf "$icon ""$wtt"

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+icon1="󰻠"
+icon2="󰈸"
+
+cpu="$(grep -o "^[^ ]*" /proc/loadavg )" 
+cput=$(sensors | awk '/Core 0/ {print "" $3}' | tr -d '+')
+printf "$icon1 $cpu $icon2$cput"
